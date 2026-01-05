@@ -1,0 +1,8 @@
+package LLD.OCP;
+
+public class VIPCustomer implements DiscountStrategy{
+    @Override
+    public double calculateDiscount(double amount) {
+        return amount*0.20;
+    }
+}
