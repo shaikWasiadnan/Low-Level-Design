@@ -7,6 +7,7 @@ import LLD.Inheritance.Wheels;
 import LLD.Polymorphism.Circle;
 import LLD.Polymorphism.Rectangle;
 import LLD.Polymorphism.Shape;
+import LLD.SRP.UserController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,11 +30,12 @@ public class main{
 //        Wheels wheel = new Wheels();
 //        Car car = new Car(eng,wheel);
 //        car.drive();
-        List<Shape> list = new ArrayList<>();
-        list.add(new Circle(3.0));
-        list.add(new Rectangle(3.0,4.0));
-        for(Shape item : list){
-            System.out.println(item.calculateArea());
-        }
+//        List<Shape> list = new ArrayList<>();
+//        list.add(new Circle(3.0));
+//        list.add(new Rectangle(3.0,4.0));
+//        for(Shape item : list){
+//            System.out.println(item.calculateArea());
+//        }
+        
     }
 }
