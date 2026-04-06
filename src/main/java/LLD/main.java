@@ -7,6 +7,8 @@ import LLD.Inheritance.Wheels;
 import LLD.Polymorphism.Circle;
 import LLD.Polymorphism.Rectangle;
 import LLD.Polymorphism.Shape;
+import LLD.SRP.Shopping.SRPViolation.Item;
+import LLD.SRP.Shopping.SRPViolation.shoppingCart;
 import LLD.SRP.UserController;
 
 import java.util.ArrayList;
@@ -36,6 +38,11 @@ public class main{
 //        for(Shape item : list){
 //            System.out.println(item.calculateArea());
 //        }
+        shoppingCart cart = new shoppingCart();
+        cart.addToCart(new Item("Milk",50));
+        cart.addToCart(new Item("Eggs",100));
+        System.out.println(cart.calculateTotal());
+        cart.saveToDb();
 
     }
 }
