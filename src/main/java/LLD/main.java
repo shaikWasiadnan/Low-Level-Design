@@ -1,17 +1,16 @@
 package LLD;
 
 
-import LLD.SRP.Shopping.SRPFollowed.Item;
-import LLD.SRP.Shopping.SRPFollowed.Persistence;
-import LLD.SRP.Shopping.SRPFollowed.ShoppingCart;
+import LLD.OCP.Shopping.OCPViolated.Item;
+import LLD.OCP.Shopping.OCPViolated.Persistence;
+import LLD.OCP.Shopping.OCPViolated.ShoppingCart;
+
 
 public class main{
     public static void main(String[] args) {
         ShoppingCart cart = new ShoppingCart();
-        cart.addToCart(new Item("Flour",90));
-        cart.addToCart(new Item("Oil",280));
-        System.out.println(cart.calculateTotal());
+        cart.addToCart(new Item("Curd",40));
         Persistence persistence = new Persistence(cart);
-        persistence.saveToDb();
+        persistence.saveToSQL();
     }
 }
