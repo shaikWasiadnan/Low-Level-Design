@@ -1,24 +1,21 @@
 package LLD;
 
 
-import LLD.LSP.LSPViolated.Account;
-import LLD.LSP.LSPViolated.CurrentAcc;
-import LLD.LSP.LSPViolated.FixedDepositAcc;
-import LLD.LSP.LSPViolated.SavingsAcc;
+import LLD.LSP.LSPFollowed.*;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class main{
     public static void main(String[] args) {
-        Account savings = new SavingsAcc();
-        savings.deposit(5000);
-        savings.withDraw(2000);
-        Account current = new CurrentAcc();
-        current.deposit(2000);
-        current.withDraw(6000);
-        Account fixed = new FixedDepositAcc();
-        fixed.deposit(8000);
-        //Will get Exception here as withdrawel is not possible
-        fixed.withDraw(5000);
+        List<Account> withDrawable = new ArrayList<>();
+        withDrawable.add(new SavingsAcc());
+        withDrawable.add(new CurrentAcc());
+        List<OnlyDeposit> onlyDeposits = new ArrayList<>();
+        onlyDeposits.add(new FixedDepositAcc());
+        BankClient client = new BankClient(withDrawable,onlyDeposits);
+        client.processTransaction();
+
     }
 
 }
