@@ -1,12 +1,12 @@
-package LLD.ParkingLotSystem;
+package LLD.ParkingLotSystem.SystemBoot;
 
-import LLD.ParkingLotSystem.enums.SpotType;
+import LLD.ParkingLotSystem.SystemBoot.enums.SpotType;
 
 import java.util.*;
 
 
 
-public class SpotNearestToElevatorStrategy implements SpotAssignmentStrategy{
+public class SpotNearestToElevatorStrategy implements SpotAssignmentStrategy {
     Map<SpotType,PriorityQueue<ParkingSpot>> availableSpots = new HashMap<>();
     public SpotNearestToElevatorStrategy(List<ParkingSpot> allSpots){
         Comparator<ParkingSpot> comparator = Comparator.comparingInt(ParkingSpot::getDistanceFromElevator);

@@ -1,4 +1,4 @@
-package LLD.ParkingLotSystem.enums;
+package LLD.ParkingLotSystem.SystemBoot.enums;
 
 public enum SpotType{
     LARGE,

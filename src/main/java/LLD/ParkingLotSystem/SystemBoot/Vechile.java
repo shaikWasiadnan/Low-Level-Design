@@ -1,6 +1,6 @@
-package LLD.ParkingLotSystem;
+package LLD.ParkingLotSystem.SystemBoot;
 
-import LLD.ParkingLotSystem.enums.VechileType;
+import LLD.ParkingLotSystem.SystemBoot.enums.VechileType;
 
 public class Vechile {
    private String licensePlateNumber;

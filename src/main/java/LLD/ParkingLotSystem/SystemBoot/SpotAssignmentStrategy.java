@@ -1,6 +1,6 @@
-package LLD.ParkingLotSystem;
+package LLD.ParkingLotSystem.SystemBoot;
 
-import LLD.ParkingLotSystem.enums.SpotType;
+import LLD.ParkingLotSystem.SystemBoot.enums.SpotType;
 
 public interface SpotAssignmentStrategy {
     ParkingSpot getAvailableSpot(SpotType type);

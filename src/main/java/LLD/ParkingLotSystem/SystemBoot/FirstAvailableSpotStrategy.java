@@ -1,10 +1,10 @@
-package LLD.ParkingLotSystem;
+package LLD.ParkingLotSystem.SystemBoot;
 
-import LLD.ParkingLotSystem.enums.SpotType;
+import LLD.ParkingLotSystem.SystemBoot.enums.SpotType;
 
 import java.util.*;
 
-public class FirstAvailableSpotStrategy implements SpotAssignmentStrategy{
+public class FirstAvailableSpotStrategy implements SpotAssignmentStrategy {
     Map<SpotType,Queue<ParkingSpot>> availableSpots = new HashMap<>();
     public FirstAvailableSpotStrategy(List<ParkingSpot> allSpots){
         availableSpots.put(SpotType.COMPACT,new LinkedList<>());
